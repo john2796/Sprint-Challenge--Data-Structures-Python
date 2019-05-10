@@ -56,7 +56,7 @@ buffer.append('f')
 buffer.get()   # should return ['d', 'e', 'f']
 ```
 
-#### Task 2. Runtime Optimization
+#### [x] Task 2. Runtime Optimization
 
 Navigate into the `names` directory. Here you will find two text files containing 10,000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries. Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop. What is the runtime complexity of this code?
 
