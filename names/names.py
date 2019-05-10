@@ -11,8 +11,25 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []
-for key in names_1:  # O (n)
-    if key in names_2:
+sorted_name = sorted(names_1)
+
+
+def binary_search_iterative(arr, target):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if target == arr[mid]:
+            return target
+        elif target < arr[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+        return -1
+
+
+for key in names_2:
+    if binary_search_iterative(sorted_name, key) is not -1:
         duplicates.append(key)
 
 end_time = time.time()
